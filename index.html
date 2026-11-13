@@ -750,6 +750,166 @@
             }
         }
 
+    
+
+        /* =========================
+           ONLINE APPOINTMENT AND FEEDBACK FORMS
+        ========================== */
+
+        .booking-section,
+        .feedback-section {
+            background: #fff7fb;
+        }
+
+        .form-card {
+            max-width: 950px;
+            margin: auto;
+            padding: 38px;
+            background: #fff;
+            border-radius: 22px;
+            box-shadow: 0 10px 35px rgba(133, 31, 112, 0.12);
+        }
+
+        .form-card h3 {
+            color: #8e1b75;
+            margin: 28px 0 16px;
+            padding-bottom: 9px;
+            border-bottom: 1px solid #f0d9e9;
+        }
+
+        .form-card h3:first-child {
+            margin-top: 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .form-card .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-card .form-group label,
+        .form-card .group-label {
+            display: block;
+            color: #5c185c;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .form-card input[type="text"],
+        .form-card input[type="tel"],
+        .form-card input[type="email"],
+        .form-card input[type="date"],
+        .form-card input[type="time"],
+        .form-card input[type="password"],
+        .form-card select,
+        .form-card textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d8c7d4;
+            border-radius: 9px;
+            font: inherit;
+            background: #fff;
+        }
+
+        .form-card input:focus,
+        .form-card select:focus,
+        .form-card textarea:focus {
+            outline: 2px solid #e81769;
+            border-color: #e81769;
+        }
+
+        .form-card textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .choice-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            margin: 10px 0 20px;
+        }
+
+        .choice-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: normal;
+            color: #444;
+        }
+
+        .choice-group input {
+            accent-color: #a51b83;
+        }
+
+        .form-help {
+            color: #6b6269;
+            font-size: 13px;
+            margin: 5px 0 14px;
+        }
+
+        .form-submit {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #8c1c91, #e81769);
+            color: #fff;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-submit:hover {
+            opacity: .9;
+        }
+
+        .media-section {
+            background: #fff;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .media-card {
+            background: #fff7fb;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .07);
+        }
+
+        .media-card h3 {
+            color: #8e1b75;
+            margin-bottom: 12px;
+        }
+
+        .media-card audio,
+        .media-card video {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .form-grid,
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card {
+                padding: 22px;
+            }
+        }
+
+
     </style>
 </head>
 
@@ -781,6 +941,10 @@
                 <a href="#gallery">Gallery</a>
 
                 <a href="#about">About Us</a>
+
+                <a href="#appointment">Book Appointment</a>
+
+                <a href="#feedback">Customer Feedback</a>
 
                 <a href="#contact">Contact</a>
 
@@ -819,7 +983,7 @@
                     Explore Services
                 </a>
 
-                <a href="#contact" class="btn btn-secondary">
+                <a href="#appointment" class="btn btn-secondary">
                     Book Appointment
                 </a>
 
@@ -1069,17 +1233,17 @@
 
                 <ol>
 
-                    <li>Select the required service.</li>
+                    <li>Open the online appointment booking form.</li>
 
-                    <li>Check the available appointment time.</li>
+                    <li>Enter your full name, telephone number and email address.</li>
 
-                    <li>Contact the salon by telephone, email or in person.</li>
+                    <li>Select your preferred service, date and appointment time.</li>
 
-                    <li>Confirm the appointment.</li>
+                    <li>Choose any additional services and provide wig information where applicable.</li>
 
-                    <li>Visit the salon at the agreed time.</li>
+                    <li>Indicate whether you are a new or returning customer and whether you prefer in-salon or home service.</li>
 
-                    <li>Enjoy your professional beauty service.</li>
+                    <li>Submit the form and wait for the salon to contact you to confirm the appointment.</li>
 
                 </ol>
 
@@ -1811,6 +1975,434 @@
 
 
 
+
+
+
+
+    <!-- =====================================================
+         ONLINE CUSTOMER APPOINTMENT BOOKING FORM
+         Coursework requirements: personal details, service
+         selection, checkboxes, radio buttons, wig information,
+         instructions, account fields and HTML5 validation.
+    ====================================================== -->
+
+    <section id="appointment" class="booking-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Online Appointment Booking</h2>
+
+            <p class="section-subtitle">
+                Request your preferred beauty service at Touch Beauty Salon.
+                Complete the required details below. The salon will contact
+                you to confirm your appointment.
+            </p>
+
+            <form class="form-card" action="#" method="post">
+
+                <h3>1. Customer Personal Details</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="bookingFullName">Full Name *</label>
+                        <input type="text" id="bookingFullName" name="full_name"
+                               placeholder="Enter your full name"
+                               autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingTelephone">Telephone Number *</label>
+                        <input type="tel" id="bookingTelephone" name="telephone"
+                               placeholder="+2567XXXXXXXX or 07XXXXXXXX"
+                               pattern="(\+256[0-9]{9}|0[0-9]{9})"
+                               title="Enter a Ugandan number such as 0771234567 or +256771234567."
+                               autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingEmail">Email Address *</label>
+                        <input type="email" id="bookingEmail" name="email"
+                               placeholder="example@email.com"
+                               autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingDate">Preferred Appointment Date *</label>
+                        <input type="date" id="bookingDate" name="appointment_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookingTime">Preferred Appointment Time *</label>
+                        <input type="time" id="bookingTime" name="appointment_time" required>
+                    </div>
+
+                </div>
+
+                <h3>2. Select Your Main Service</h3>
+
+                <div class="form-group">
+                    <label for="mainService">Choose the service you need *</label>
+                    <select id="mainService" name="main_service" required>
+                        <option value="">-- Select a service --</option>
+                        <option value="Wig installation">Wig installation</option>
+                        <option value="Wig customization">Wig customization</option>
+                        <option value="Hair braiding">Hair braiding</option>
+                        <option value="Hair treatment">Hair treatment</option>
+                        <option value="Nails">Nails</option>
+                        <option value="Makeup">Makeup</option>
+                        <option value="Hair styling">Hair styling</option>
+                        <option value="Wig consultation">Wig consultation</option>
+                    </select>
+                </div>
+
+                <h3>3. Additional Services</h3>
+
+                <p class="form-help">
+                    Select any additional services you would like to receive.
+                    You may select more than one option.
+                </p>
+
+                <div class="choice-group">
+                    <label><input type="checkbox" name="additional_services[]" value="Hair washing"> Hair washing</label>
+                    <label><input type="checkbox" name="additional_services[]" value="Deep conditioning"> Deep conditioning</label>
+                    <label><input type="checkbox" name="additional_services[]" value="Styling"> Styling</label>
+                    <label><input type="checkbox" name="additional_services[]" value="Nail treatment"> Nail treatment</label>
+                    <label><input type="checkbox" name="additional_services[]" value="Makeup"> Makeup</label>
+                    <label><input type="checkbox" name="additional_services[]" value="Eyebrow shaping"> Eyebrow shaping</label>
+                </div>
+
+                <h3>4. Customer Type</h3>
+
+                <p class="form-help">Please indicate whether you have visited us before.</p>
+
+                <div class="choice-group">
+                    <label><input type="radio" name="customer_type" value="New customer" required> New customer</label>
+                    <label><input type="radio" name="customer_type" value="Returning customer"> Returning customer</label>
+                </div>
+
+                <h3>5. Preferred Service Location</h3>
+
+                <div class="choice-group">
+                    <label><input type="radio" name="service_location" value="In-salon" required> In-salon</label>
+                    <label><input type="radio" name="service_location" value="Home service"> Home service</label>
+                </div>
+
+                <h3>6. Wig Information</h3>
+
+                <p class="form-help">
+                    Complete these fields if your selected service involves a wig.
+                    Select "Not applicable" where the information is not relevant.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="wigType">Wig Type</label>
+                        <select id="wigType" name="wig_type">
+                            <option value="">-- Select wig type --</option>
+                            <option>Human hair</option>
+                            <option>Synthetic hair</option>
+                            <option>Blended hair</option>
+                            <option>Not sure</option>
+                            <option>Not applicable</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wigSize">Wig Size</label>
+                        <select id="wigSize" name="wig_size">
+                            <option value="">-- Select wig size --</option>
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                            <option>Not sure</option>
+                            <option>Not applicable</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="laceType">Lace Type</label>
+                        <select id="laceType" name="lace_type">
+                            <option value="">-- Select lace type --</option>
+                            <option>Closure</option>
+                            <option>Front lace</option>
+                            <option>Full lace</option>
+                            <option>360 lace</option>
+                            <option>Not sure</option>
+                            <option>Not applicable</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hairLength">Hair Length</label>
+                        <select id="hairLength" name="hair_length">
+                            <option value="">-- Select hair length --</option>
+                            <option>Short</option>
+                            <option>Medium</option>
+                            <option>Long</option>
+                            <option>Extra long</option>
+                            <option>Not applicable</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <h3>7. Additional Instructions</h3>
+
+                <div class="form-group">
+                    <label for="specialInstructions">
+                        Describe your preferred style or any special requirements
+                    </label>
+                    <textarea id="specialInstructions" name="instructions"
+                              placeholder="For example, describe the hairstyle, wig style, colour or any other instructions."></textarea>
+                </div>
+
+                <h3>8. Customer Account Details (Coursework Demonstration)</h3>
+
+                <p class="form-help">
+                    These fields demonstrate username, email and password controls
+                    required for the assignment. This static HTML page does not
+                    create accounts or securely store passwords. Do not enter a
+                    real password here.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="bookingUsername">Username</label>
+                        <input type="text" id="bookingUsername" name="username"
+                               minlength="3" placeholder="Choose a username"
+                               autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accountEmail">Account Email</label>
+                        <input type="email" id="accountEmail" name="account_email"
+                               placeholder="Enter account email"
+                               autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accountPassword">Password (demonstration only)</label>
+                        <input type="password" id="accountPassword" name="account_password"
+                               minlength="8" placeholder="At least 8 characters"
+                               autocomplete="new-password">
+                    </div>
+
+                </div>
+
+                <p class="form-help">
+                    * Required fields. Your browser checks required entries,
+                    email format, telephone format and other HTML5 input rules.
+                </p>
+
+                <button type="submit" class="form-submit">
+                    Submit Appointment Request
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CUSTOMER FEEDBACK FORM
+         Covers service quality, staff assistance, cleanliness,
+         professionalism and overall customer satisfaction.
+    ====================================================== -->
+
+    <section id="feedback" class="feedback-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Customer Feedback Form</h2>
+
+            <p class="section-subtitle">
+                Your opinion matters to us. Please complete this form
+                to help Touch Beauty Salon improve its services.
+            </p>
+
+            <form class="form-card" action="#" method="post">
+
+                <h3>Customer Details</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="feedbackName">Full Name *</label>
+                        <input type="text" id="feedbackName" name="feedback_name"
+                               placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackEmail">Email Address *</label>
+                        <input type="email" id="feedbackEmail" name="feedback_email"
+                               placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedbackVisitDate">Date of Visit</label>
+                        <input type="date" id="feedbackVisitDate" name="visit_date">
+                    </div>
+
+                </div>
+
+                <h3>1. Quality of Service</h3>
+
+                <div class="form-group">
+                    <label for="serviceQuality">How would you rate the quality of the service you received? *</label>
+                    <select id="serviceQuality" name="service_quality" required>
+                        <option value="">-- Select your rating --</option>
+                        <option>Excellent</option>
+                        <option>Very good</option>
+                        <option>Good</option>
+                        <option>Fair</option>
+                        <option>Poor</option>
+                    </select>
+                </div>
+
+                <h3>2. Staff Assistance</h3>
+
+                <div class="form-group">
+                    <span class="group-label">How helpful and welcoming was our staff? *</span>
+                    <div class="choice-group">
+                        <label><input type="radio" name="staff_assistance" value="Excellent" required> Excellent</label>
+                        <label><input type="radio" name="staff_assistance" value="Good"> Good</label>
+                        <label><input type="radio" name="staff_assistance" value="Fair"> Fair</label>
+                        <label><input type="radio" name="staff_assistance" value="Poor"> Poor</label>
+                    </div>
+                </div>
+
+                <h3>3. Cleanliness of the Salon</h3>
+
+                <div class="form-group">
+                    <span class="group-label">How satisfied were you with the cleanliness and hygiene of the salon? *</span>
+                    <div class="choice-group">
+                        <label><input type="radio" name="cleanliness" value="Excellent" required> Excellent</label>
+                        <label><input type="radio" name="cleanliness" value="Good"> Good</label>
+                        <label><input type="radio" name="cleanliness" value="Fair"> Fair</label>
+                        <label><input type="radio" name="cleanliness" value="Poor"> Poor</label>
+                    </div>
+                </div>
+
+                <h3>4. Staff Professionalism</h3>
+
+                <div class="form-group">
+                    <label for="professionalism">How would you rate the professionalism of our staff? *</label>
+                    <select id="professionalism" name="professionalism" required>
+                        <option value="">-- Select your rating --</option>
+                        <option>Very professional</option>
+                        <option>Professional</option>
+                        <option>Fair</option>
+                        <option>Not professional</option>
+                    </select>
+                </div>
+
+                <h3>5. Overall Customer Satisfaction</h3>
+
+                <div class="form-group">
+                    <span class="group-label">Overall, how satisfied are you with your experience? *</span>
+                    <div class="choice-group">
+                        <label><input type="radio" name="overall_satisfaction" value="Very satisfied" required> Very satisfied</label>
+                        <label><input type="radio" name="overall_satisfaction" value="Satisfied"> Satisfied</label>
+                        <label><input type="radio" name="overall_satisfaction" value="Neutral"> Neutral</label>
+                        <label><input type="radio" name="overall_satisfaction" value="Dissatisfied"> Dissatisfied</label>
+                        <label><input type="radio" name="overall_satisfaction" value="Very dissatisfied"> Very dissatisfied</label>
+                    </div>
+                </div>
+
+                <h3>6. Recommendation</h3>
+
+                <div class="form-group">
+                    <span class="group-label">Would you recommend Touch Beauty Salon to other people? *</span>
+                    <div class="choice-group">
+                        <label><input type="radio" name="recommendation" value="Yes" required> Yes</label>
+                        <label><input type="radio" name="recommendation" value="No"> No</label>
+                        <label><input type="radio" name="recommendation" value="Not sure"> Not sure</label>
+                    </div>
+                </div>
+
+                <h3>7. Comments and Suggestions</h3>
+
+                <div class="form-group">
+                    <label for="feedbackComments">What did you like, and what should we improve?</label>
+                    <textarea id="feedbackComments" name="feedback_comments"
+                              placeholder="Write your comments and suggestions here..."></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">
+                    Submit Customer Feedback
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AUDIO AND VIDEO ELEMENTS
+         Put the supplied media files in the named folders.
+    ====================================================== -->
+
+    <section id="media" class="media-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Beauty Media and Demonstrations</h2>
+
+            <p class="section-subtitle">
+                Listen to our salon message and watch a beauty-service
+                demonstration using the media controls below.
+            </p>
+
+            <div class="media-grid">
+
+                <div class="media-card">
+                    <h3>Touch Beauty Salon Audio Message</h3>
+                    <p>
+                        Listen to information about our salon and services.
+                        Use the controls to play, pause or adjust the volume.
+                    </p>
+                    <audio controls preload="metadata">
+                        <source src="audio/salon-message.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p class="form-help">
+                        Audio file location: audio/salon-message.mp3
+                    </p>
+                </div>
+
+                <div class="media-card">
+                    <h3>Beauty Service Video Demonstration</h3>
+                    <p>
+                        Watch a demonstration of a beauty service.
+                        Use the video controls to play, pause and adjust playback.
+                    </p>
+                    <video controls preload="metadata" poster="images/wig.jpg">
+                        <source src="videos/wig-installation.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <p class="form-help">
+                        Video file location: videos/wig-installation.mp4
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
     <!-- =========================
          CONTACT
     ========================== -->
@@ -1975,7 +2567,7 @@
             and let us help you look and feel your best.
         </p>
 
-        <a href="#contact" class="btn">
+        <a href="#appointment" class="btn">
             Book Your Appointment
         </a>
 
@@ -2024,6 +2616,14 @@
 
                 <p>
                     <a href="#gallery">Gallery</a>
+                </p>
+
+                <p>
+                    <a href="#appointment">Book Appointment</a>
+                </p>
+
+                <p>
+                    <a href="#feedback">Customer Feedback</a>
                 </p>
 
                 <p>
@@ -2175,7 +2775,7 @@
 
 
         function nextImage() {
-
+ 
             currentImage++;
 
             if (currentImage >= images.length) {
@@ -2211,6 +2811,21 @@
             nextImage();
 
         }, 3000);
+
+    
+
+        /* Prevent customers from selecting an appointment date in the past. */
+        const appointmentDateField = document.getElementById("bookingDate");
+
+        if (appointmentDateField) {
+            const now = new Date();
+            const localDate = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+                .toISOString()
+                .split("T")[0];
+
+            appointmentDateField.min = localDate;
+        }
+
 
     </script>
 
