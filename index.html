@@ -12,6 +12,7 @@
     <title>Touch Beauty Salon | Beauty, Confidence and Style</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 
 
@@ -30,8 +31,11 @@
                 Touch Beauty Salon
                 <span>Beauty, Confidence and Style</span>
             </div>
-
-            <nav>
+<button class="menu-toggle" id="menuToggle" type="button"
+        aria-expanded="false" aria-controls="mainNav">
+    ☰ Menu
+</button>
+            <nav id="mainNav">
 
                 <a href="#home">Home</a>
 
@@ -1157,20 +1161,29 @@
 
                 <h3>2. Select Your Main Service</h3>
 
-                <div class="form-group">
-                    <label for="mainService">Choose the service you need *</label>
-                    <select id="mainService" name="main_service" required>
-                        <option value="">-- Select a service --</option>
-                        <option value="Wig installation">Wig installation</option>
-                        <option value="Wig customization">Wig customization</option>
-                        <option value="Hair braiding">Hair braiding</option>
-                        <option value="Hair treatment">Hair treatment</option>
-                        <option value="Nails">Nails</option>
-                        <option value="Makeup">Makeup</option>
-                        <option value="Hair styling">Hair styling</option>
-                        <option value="Wig consultation">Wig consultation</option>
-                    </select>
-                </div>
+        
+<div class="form-group">
+
+    <label for="mainService">Choose the service you need *</label>
+
+    <select id="mainService" name="main_service" required>
+        <option value="">-- Select a service --</option>
+    </select>
+
+</div>
+
+<div id="serviceList" class="js-service-list"></div>
+
+<p id="serviceDetails" class="form-help">
+    Select a service to view its details.
+</p>
+
+<p id="appointmentEstimate" class="form-help">
+    Your estimated appointment cost will appear here.
+</p>
+<button type="button" id="calculateAppointmentEstimate">
+    Calculate Appointment Cost
+</button>
 
                 <h3>3. Additional Services</h3>
 
@@ -1314,7 +1327,7 @@
                 </p>
 
               <div class="form-buttons">
-
+<p id="appointmentMessage" class="form-help" aria-live="polite"></p>
     <button type="submit" class="form-submit">
         Submit Appointment Request
     </button>
@@ -1809,166 +1822,7 @@
         </div>
 
     </footer>
-
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
-    <script>
-
-        /* =========================
-           BILL CALCULATOR
-        ========================== */
-
-        function calculateBill() {
-
-            let price =
-                Number(document.getElementById("service").value);
-
-            let quantity =
-                Number(document.getElementById("quantity").value);
-
-            let discount =
-                Number(document.getElementById("discount").value);
-
-            let deposit =
-                Number(document.getElementById("deposit").value);
-
-
-            if (quantity < 1) {
-
-                alert("Please enter a quantity of at least 1.");
-
-                return;
-
-            }
-
-
-            let total = price * quantity;
-
-            let finalTotal = total - discount;
-
-            let balance = finalTotal - deposit;
-
-
-            if (balance < 0) {
-
-                balance = 0;
-
-            }
-
-
-            document.getElementById("result").innerHTML =
-
-                "Total Service Cost: UGX "
-                + total.toLocaleString()
-
-                + "<br>Discount: UGX "
-                + discount.toLocaleString()
-
-                + "<br>Amount After Discount: UGX "
-                + finalTotal.toLocaleString()
-
-                + "<br>Deposit: UGX "
-                + deposit.toLocaleString()
-
-                + "<br><strong>Balance: UGX "
-                + balance.toLocaleString()
-                + "</strong>";
-
-        }
-
-
-
-        /* =========================
-           AUTOMATIC IMAGE GALLERY
-        ========================== */
-
-        let images = [
-
-            "images/braiding.jpg",
-
-            "images/wig.jpg",
-
-            "images/nails.jpg",
-
-            "images/manicure.jpg",
-
-            "images/styling.jpg",
-
-            "images/salon.jpg"
-
-        ];
-
-
-        let currentImage = 0;
-
-
-        function showImage() {
-
-            document.getElementById("sliderImage").src =
-                images[currentImage];
-
-        }
-
-
-        function nextImage() {
- 
-            currentImage++;
-
-            if (currentImage >= images.length) {
-
-                currentImage = 0;
-
-            }
-
-            showImage();
-
-        }
-
-
-        function previousImage() {
-
-            currentImage--;
-
-            if (currentImage < 0) {
-
-                currentImage = images.length - 1;
-
-            }
-
-            showImage();
-
-        }
-
-
-        /* Change image automatically every 3 seconds */
-
-        setInterval(function () {
-
-            nextImage();
-
-        }, 3000);
-
-    
-
-        /* Prevent customers from selecting an appointment date in the past. */
-        const appointmentDateField = document.getElementById("bookingDate");
-
-        if (appointmentDateField) {
-            const now = new Date();
-            const localDate = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
-                .toISOString()
-                .split("T")[0];
-
-            appointmentDateField.min = localDate;
-        }
-
-
-    </script>
-
+   
 
 </body>
 
