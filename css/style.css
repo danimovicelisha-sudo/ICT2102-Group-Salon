@@ -1,0 +1,1082 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #fff7fb;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        section {
+            padding: 80px 8%;
+            scroll-margin-top: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #8e1b75;
+            font-size: 34px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+            color: #666;
+        }
+
+
+        /* =========================
+           NAVIGATION / HEADER
+        ========================== */
+
+        header {
+            background: linear-gradient(135deg, #741c8c, #e81769);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        nav a {
+            color: white;
+            padding: 9px 13px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #9b197b;
+        }
+
+
+        /* =========================
+           HERO / HOME
+        ========================== */
+
+        #home {
+            min-height: 650px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(72, 7, 76, 0.68),
+                    rgba(210, 12, 94, 0.60)
+                ),
+                url("../images/salon.jpg");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .hero-content .tagline {
+            font-size: 23px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid white;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #92166f;
+        }
+
+        .btn-secondary {
+            color: white;
+            background: transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =========================
+           WELCOME
+        ========================== */
+
+        .welcome-box {
+            background: white;
+            padding: 45px;
+            border-radius: 25px;
+            box-shadow: 0 10px 35px rgba(133, 31, 112, 0.12);
+            text-align: center;
+        }
+
+        .welcome-box p {
+            max-width: 850px;
+            margin: 15px auto;
+        }
+
+        .welcome-image {
+            width: 100%;
+            max-width: 750px;
+            height: 380px;
+            object-fit: cover;
+            margin: 30px auto 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* =========================
+           SERVICE CARDS
+        ========================== */
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #d71979;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+        }
+
+        .service-card h3 {
+            color: #8d1a76;
+            margin-bottom: 10px;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           SERVICE LISTS
+        ========================== */
+
+        .lists-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .list-box {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        .list-box h3 {
+            color: #8d1a76;
+            margin-bottom: 15px;
+        }
+
+        .list-box ul,
+        .list-box ol {
+            padding-left: 25px;
+        }
+
+        .list-box li {
+            margin: 8px 0;
+        }
+
+        .list-box ul ul {
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================== */
+
+        #gallery {
+            background: #fff;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 18px;
+            height: 260px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+            color: white;
+            padding: 35px 15px 15px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           AUTOMATIC GALLERY
+        ========================== */
+
+        .slider {
+            max-width: 850px;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .slider-buttons {
+            margin-top: 18px;
+        }
+
+        .slider-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 25px;
+            background: #92166f;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .slider-buttons button:hover {
+            background: #e81769;
+        }
+
+
+        /* =========================
+           PRICE TABLE
+        ========================== */
+
+        .table-container {
+            overflow-x: auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 750px;
+        }
+
+        th {
+            background: linear-gradient(135deg, #861c91, #e81769);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        td {
+            padding: 14px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:nth-child(even) {
+            background: #fff2fa;
+        }
+
+        tr:hover {
+            background: #f9dcec;
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================== */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .about-text ul {
+            padding-left: 25px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           WHY CHOOSE US
+        ========================== */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+        }
+
+        .feature h3 {
+            color: #8e1b75;
+            margin: 12px 0;
+        }
+
+
+        /* =========================
+           SCHEDULE
+        ========================== */
+
+        #schedule {
+            background: #fff;
+        }
+
+
+        /* =========================
+           CALCULATOR
+        ========================== */
+
+        .calculator {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 22px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #5c185c;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #8c1c91, #e81769);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .calculate-btn:hover {
+            opacity: 0.9;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #fff1f9;
+            color: #75176c;
+            font-weight: bold;
+            text-align: center;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        #contact {
+            background: linear-gradient(135deg, #741c8c, #e81769);
+            color: white;
+        }
+
+        #contact .section-title {
+            color: white;
+        }
+
+        #contact .section-subtitle {
+            color: #f9e8f4;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.13);
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-card a {
+            color: white;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           RESOURCES
+        ========================== */
+
+        .resources {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .resources li {
+            margin: 18px 0;
+        }
+
+        .resources a {
+            color: #92166f;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           CALL TO ACTION
+        ========================== */
+
+        .cta {
+            text-align: center;
+            background: #fff;
+            padding: 60px 20px;
+        }
+
+        .cta h2 {
+            color: #8d1a76;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+        }
+
+        .cta .btn {
+            background: linear-gradient(135deg, #8c1c91, #e81769);
+            color: white;
+            border: none;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #241322;
+            color: white;
+            padding: 45px 8%;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        footer h3 {
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: #f2b7dc;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .service-grid,
+            .features,
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .lists-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-content .tagline {
+                font-size: 18px;
+            }
+
+            .service-grid,
+            .features,
+            .contact-grid,
+            .gallery,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .welcome-box {
+                padding: 25px;
+            }
+
+            .slider img {
+                height: 280px;
+            }
+
+            nav {
+                gap: 2px;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 7px 8px;
+            }
+        }
+
+    
+
+        /* =========================
+           ONLINE APPOINTMENT AND FEEDBACK FORMS
+        ========================== */
+
+        .booking-section,
+        .feedback-section {
+            background: #fff7fb;
+        }
+
+        .form-card {
+            max-width: 950px;
+            margin: auto;
+            padding: 38px;
+            background: #fff;
+            border-radius: 22px;
+            box-shadow: 0 10px 35px rgba(133, 31, 112, 0.12);
+        }
+
+        .form-card h3 {
+            color: #8e1b75;
+            margin: 28px 0 16px;
+            padding-bottom: 9px;
+            border-bottom: 1px solid #f0d9e9;
+        }
+
+        .form-card h3:first-child {
+            margin-top: 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .form-card .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-card .form-group label,
+        .form-card .group-label {
+            display: block;
+            color: #5c185c;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .form-card input[type="text"],
+        .form-card input[type="tel"],
+        .form-card input[type="email"],
+        .form-card input[type="date"],
+        .form-card input[type="time"],
+        .form-card input[type="password"],
+        .form-card select,
+        .form-card textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d8c7d4;
+            border-radius: 9px;
+            font: inherit;
+            background: #fff;
+        }
+
+        .form-card input:focus,
+        .form-card select:focus,
+        .form-card textarea:focus {
+            outline: 2px solid #e81769;
+            border-color: #e81769;
+        }
+
+        .form-card textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .choice-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            margin: 10px 0 20px;
+        }
+
+        .choice-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: normal;
+            color: #444;
+        }
+
+        .choice-group input {
+            accent-color: #a51b83;
+        }
+
+        .form-help {
+            color: #6b6269;
+            font-size: 13px;
+            margin: 5px 0 14px;
+        }
+
+        .form-submit {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #8c1c91, #e81769);
+            color: #fff;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .form-submit:hover {
+            opacity: .9;
+        }
+
+        .media-section {
+            background: #fff;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .media-card {
+            background: #fff7fb;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .07);
+        }
+
+        .media-card h3 {
+            color: #8e1b75;
+            margin-bottom: 12px;
+        }
+
+        .media-card audio,
+        .media-card video {
+            display: block;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .form-grid,
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card {
+                padding: 22px;
+            }
+        }
+/* =====================================
+   GROUP TWO CSS IMPROVEMENTS
+   TOUCH BEAUTY SALON
+===================================== */
+
+/* Unique ID selector for the main salon title */
+#salon-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 58px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Reusable service styling */
+.service-card {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-card p {
+    line-height: 1.8;
+    margin-top: 8px;
+}
+
+/* Improved service and information lists */
+.list-box li {
+    line-height: 1.8;
+    padding-left: 5px;
+}
+
+.list-box li::marker {
+    color: #d71979;
+}
+
+/* Improved images */
+.gallery-item img,
+.welcome-image,
+.about-image {
+    object-position: center;
+}
+
+.gallery-item,
+.welcome-image,
+.about-image {
+    border: 2px solid #f2d5e8;
+}
+
+/* Improved table presentation */
+table {
+    font-size: 15px;
+}
+
+th {
+    letter-spacing: 0.4px;
+}
+
+td {
+    line-height: 1.6;
+}
+
+/* Improved appointment and feedback forms */
+.form-card {
+    border: 1px solid #f0d9e9;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+    box-shadow: 0 0 0 3px rgba(232, 23, 105, 0.12);
+}
+
+/* Required fields and validation feedback */
+.form-card input:required:valid,
+.form-card select:required:valid {
+    border-left: 3px solid #34a853;
+}
+
+.form-card input:required:invalid:focus,
+.form-card select:required:invalid:focus {
+    border-left: 3px solid #e81769;
+}
+
+/* Improved radio buttons and checkboxes */
+.choice-group input[type="radio"],
+.choice-group input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    accent-color: #a51b83;
+}
+
+/* Submit and reset button styling */
+.form-submit,
+.form-card button[type="reset"] {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-submit:hover,
+.form-card button[type="reset"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(116, 28, 140, 0.2);
+}
+
+/* Multimedia presentation */
+.media-card {
+    border: 1px solid #f0d9e9;
+}
+
+.media-card audio,
+.media-card video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.media-card video {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #241322;
+}
+
+/* Better keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #e81769;
+    outline-offset: 3px;
+}
+
+/* Responsive improvements */
+@media (max-width: 600px) {
+    #salon-title {
+        font-size: 40px;
+    }
+
+    .form-card {
+        width: 100%;
+    }
+
+    .service-card {
+        min-height: 180px;
+    }
+}
+/* Appointment form submit and reset buttons */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-submit {
+    flex: 2;
+}
+
+.form-reset {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #8c1c91;
+    border-radius: 30px;
+    background: white;
+    color: #8c1c91;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-reset:hover {
+    background: #8c1c91;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(116, 28, 140, 0.2);
+}
+
+@media (max-width: 600px) {
+    .form-buttons {
+        flex-direction: column;
+    }
+}
