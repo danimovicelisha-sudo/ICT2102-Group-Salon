@@ -161,62 +161,78 @@
 
             <!-- SERVICE CARDS -->
 
-            <div class="service-grid">
+<div class="service-grid">
 
-                <div class="service-card">
-                    <div class="service-icon">✂</div>
-                    <h3>Hair Styling</h3>
-                    <p>
-                        Professional hair styling for different occasions.
-                    </p>
-                </div>
+    <div class="service-card">
+        <img src="images/styling.jpg" alt="Professional hair styling">
+        <div class="service-icon">✂</div>
+        <h3>Hair Styling</h3>
+        <p>Professional hair styling for different occasions.</p>
+    </div>
 
+    <div class="service-card">
+        <img src="images/braiding.jpg" alt="Beautiful hair braiding">
+        <div class="service-icon">♥</div>
+        <h3>Hair Braiding</h3>
+        <p>Beautiful and creative braiding styles.</p>
+    </div>
 
-                <div class="service-card">
-                    <div class="service-icon">♥</div>
-                    <h3>Hair Braiding</h3>
-                    <p>
-                        Beautiful and creative braiding styles.
-                    </p>
-                </div>
+    <div class="service-card">
+        <img src="images/wig.jpg" alt="Wig installation and styling">
+        <div class="service-icon">♕</div>
+        <h3>Wig Installation</h3>
+        <p>Professional wig fitting and installation.</p>
+    </div>
 
+    <div class="service-card">
+        <img src="images/manicure.jpg" alt="Professional manicure">
+        <div class="service-icon">💅</div>
+        <h3>Manicure</h3>
+        <p>Quality nail care and manicure services.</p>
+    </div>
 
-                <div class="service-card">
-                    <div class="service-icon">♕</div>
-                    <h3>Wig Installation</h3>
-                    <p>
-                        Professional wig fitting and installation.
-                    </p>
-                </div>
+    <div class="service-card">
+        <img src="images/nails.jpg" alt="Nail and pedicure services">
+        <div class="service-icon">✦</div>
+        <h3>Pedicure</h3>
+        <p>Relaxing and professional foot and nail care.</p>
+    </div>
 
+    <div class="service-card">
+        <img src="images/salon.jpg" alt="Beauty services at the salon">
+        <div class="service-icon">★</div>
+        <h3>Makeup</h3>
+        <p>Makeup services for events and special occasions.</p>
+    </div>
 
-                <div class="service-card">
-                    <div class="service-icon">💅</div>
-                    <h3>Manicure</h3>
-                    <p>
-                        Quality nail care and manicure services.
-                    </p>
-                </div>
+</div>
 
+<!-- FEATURED SERVICE - FLEXBOX -->
 
-                <div class="service-card">
-                    <div class="service-icon">✦</div>
-                    <h3>Pedicure</h3>
-                    <p>
-                        Relaxing and professional foot and nail care.
-                    </p>
-                </div>
+<div class="featured-service">
 
+    <img
+        src="images/wig.jpg"
+        alt="Featured wig installation service"
+    >
 
-                <div class="service-card">
-                    <div class="service-icon">★</div>
-                    <h3>Makeup</h3>
-                    <p>
-                        Makeup services for events and special occasions.
-                    </p>
-                </div>
+    <div class="featured-service-content">
 
-            </div>
+        <h3>Featured Service: Professional Wig Installation</h3>
+
+        <p>
+            Experience professional wig installation at Touch Beauty Salon.
+            Our service focuses on neat fitting, styling and customer comfort.
+            We help you achieve a beautiful and confident appearance.
+        </p>
+
+        <a href="#appointment" class="btn btn-primary">
+            Book This Service
+        </a>
+
+    </div>
+
+</div>
 
 
 
@@ -1467,48 +1483,62 @@
          Put the supplied media files in the named folders.
     ====================================================== -->
 
-    <section id="media" class="media-section">
+    
+<section id="media" class="media-section">
 
-        <div class="container">
+    <div class="container">
 
-            <h2 class="section-title">Beauty Media and Demonstrations</h2>
+        <h2 class="section-title">
+            Beauty Media and Demonstrations
+        </h2>
 
-            <p class="section-subtitle">
-                Listen to our salon message and watch a beauty-service
-                demonstration using the media controls below.
-            </p>
-<audio controls>
-    <source src="./audio/salon-welcome-message.wav" type="audio/wav">
-</audio>
+        <p class="section-subtitle">
+            Listen to our salon message and watch a beauty-service
+            demonstration using the media controls below.
+        </p>
 
-<p>
-    <a href="./audio/salon-welcome-message.wav" target="_blank">
-        OPEN AUDIO FILE
-    </a>
-</p>
+        <div class="media-grid">
 
-<div class="media-card">
+            <div class="media-card">
 
-    <h3>Our Beauty Salon Work</h3>
+                <h3>Touch Beauty Salon Welcome Message</h3>
 
-    <video controls preload="metadata" width="100%">
-        <source src="videos/our-work.mp4" type="video/mp4">
+                <p>
+                    Listen to our welcome message and learn more
+                    about the services we provide.
+                </p>
 
-        Your browser does not support video playback.
-    </video>
+                <audio controls preload="metadata">
+                    <source src="audio/salon-welcome-message.wav"
+                            type="audio/wav">
+                    Your browser does not support audio playback.
+                </audio>
 
-    <p>
-        Watch our beauty salon work and wig installation demonstration.
-    </p>
+            </div>
 
-</div>
+            <div class="media-card">
 
+                <h3>Our Beauty Salon Work</h3>
+
+                <p>
+                    Watch our beauty salon work and wig installation
+                    demonstration.
+                </p>
+
+                <video controls preload="metadata">
+                    <source src="videos/our-work.mp4"
+                            type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
 
 
 
